@@ -11,6 +11,7 @@
 @interface TempViewController ()
 
 - (void) updateFahrenheit;
+- (void) updateCelsius;
 @end
 
 @implementation TempViewController
@@ -28,7 +29,8 @@
 {
     [super viewDidLoad];
 
-    [self.celsius addTarget:self action:@selector(updateFahrenheit) forControlEvents:UIControlEventEditingChanged];
+    [self.celsius addTarget:self action:@selector(updateFahrenheit) forControlEvents:UIControlEventEditingChanged];    
+    [self.fahrenheit addTarget:self action:@selector(updateCelsius) forControlEvents:UIControlEventEditingChanged];
 }
 
 - (void)didReceiveMemoryWarning
@@ -41,7 +43,15 @@
     float celsius = [self.celsius.text floatValue];
     float fahrenheit = celsius * 1.8 + 32;
     
-    self.fahrenheit.text = [NSString stringWithFormat:@"%0.2f", fahrenheit];
+    self.fahrenheit.text = [NSString stringWithFormat:@"%0.1f", fahrenheit];
+}
+
+- (void) updateCelsius {
+    float fahrenheit = [self.fahrenheit.text floatValue];
+    float celsius = (fahrenheit - 32) / 1.8;
+    
+    self.celsius.text = [NSString stringWithFormat:@"%0.1f", celsius];
+    
 }
 
 
