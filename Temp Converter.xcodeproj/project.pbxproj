@@ -16,6 +16,8 @@
 		2250D29318021AC2003CBF45 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 2250D29218021AC2003CBF45 /* Default.png */; };
 		2250D29518021AC2003CBF45 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2250D29418021AC2003CBF45 /* Default@2x.png */; };
 		2250D29718021AC2003CBF45 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2250D29618021AC2003CBF45 /* Default-568h@2x.png */; };
+		2250D2A018021BB1003CBF45 /* TempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2250D29E18021BB1003CBF45 /* TempViewController.m */; };
+		2250D2A118021BB1003CBF45 /* TempViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2250D29F18021BB1003CBF45 /* TempViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,9 @@
 		2250D29218021AC2003CBF45 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		2250D29418021AC2003CBF45 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		2250D29618021AC2003CBF45 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		2250D29D18021BB1003CBF45 /* TempViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempViewController.h; sourceTree = "<group>"; };
+		2250D29E18021BB1003CBF45 /* TempViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempViewController.m; sourceTree = "<group>"; };
+		2250D29F18021BB1003CBF45 /* TempViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TempViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +86,9 @@
 				2250D28F18021AC2003CBF45 /* AppDelegate.h */,
 				2250D29018021AC2003CBF45 /* AppDelegate.m */,
 				2250D28718021AC2003CBF45 /* Supporting Files */,
+				2250D29D18021BB1003CBF45 /* TempViewController.h */,
+				2250D29E18021BB1003CBF45 /* TempViewController.m */,
+				2250D29F18021BB1003CBF45 /* TempViewController.xib */,
 			);
 			path = "Temp Converter";
 			sourceTree = "<group>";
@@ -154,6 +162,7 @@
 				2250D29318021AC2003CBF45 /* Default.png in Resources */,
 				2250D29518021AC2003CBF45 /* Default@2x.png in Resources */,
 				2250D29718021AC2003CBF45 /* Default-568h@2x.png in Resources */,
+				2250D2A118021BB1003CBF45 /* TempViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +175,7 @@
 			files = (
 				2250D28D18021AC2003CBF45 /* main.m in Sources */,
 				2250D29118021AC2003CBF45 /* AppDelegate.m in Sources */,
+				2250D2A018021BB1003CBF45 /* TempViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
