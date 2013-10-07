@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#define kDefaultFahrenheit 80.0
 
 @interface TempViewController : UIViewController
 
