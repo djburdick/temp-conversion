@@ -13,6 +13,7 @@
 - (void) updateFahrenheit;
 - (void) updateCelsius;
 - (void) setDefaults;
+- (void) resetValues;
 @end
 
 @implementation TempViewController
@@ -32,6 +33,9 @@
     
     [self setDefaults];
 
+    [self.celsius addTarget:self action:@selector(resetValues) forControlEvents:UIControlEventTouchDown];
+    [self.fahrenheit addTarget:self action:@selector(resetValues) forControlEvents:UIControlEventTouchDown];
+    
     [self.celsius addTarget:self action:@selector(updateFahrenheit) forControlEvents:UIControlEventEditingChanged];    
     [self.fahrenheit addTarget:self action:@selector(updateCelsius) forControlEvents:UIControlEventEditingChanged];
 }
@@ -60,6 +64,11 @@
 - (void) setDefaults {
     self.fahrenheit.text = [NSString stringWithFormat:@"%0.1f", kDefaultFahrenheit];
     [self updateCelsius];
+}
+
+- (void) resetValues {
+    self.fahrenheit.text = @"";
+    self.celsius.text = @"";
 }
 
 
