@@ -61,6 +61,10 @@
     
 }
 
+- (IBAction) doneEditing {
+    [self.view endEditing:YES];
+}
+
 - (void) setDefaults {
     self.fahrenheit.text = [NSString stringWithFormat:@"%0.1f", kDefaultFahrenheit];
     [self updateCelsius];

@@ -14,4 +14,6 @@
 @property (nonatomic, strong) IBOutlet UITextField *celsius;
 @property (nonatomic, strong) IBOutlet UITextField *fahrenheit;
 
+- (IBAction) doneEditing;
+
 @end
