@@ -8,7 +8,12 @@
 
 #import "TempViewController.h"
 
+static float const DefaultFahrenheit = 80.0;
+
 @interface TempViewController ()
+
+@property (nonatomic, strong) IBOutlet UITextField *celsius;
+@property (nonatomic, strong) IBOutlet UITextField *fahrenheit;
 
 - (void) updateFahrenheit;
 - (void) updateCelsius;
@@ -33,10 +38,10 @@
     
     [self setDefaults];
 
-    [self.celsius addTarget:self action:@selector(resetValues) forControlEvents:UIControlEventTouchDown];
-    [self.fahrenheit addTarget:self action:@selector(resetValues) forControlEvents:UIControlEventTouchDown];
+    self.celsius.delegate = self;
+    self.fahrenheit.delegate = self;
     
-    [self.celsius addTarget:self action:@selector(updateFahrenheit) forControlEvents:UIControlEventEditingChanged];    
+    [self.celsius addTarget:self action:@selector(updateFahrenheit) forControlEvents:UIControlEventEditingChanged];
     [self.fahrenheit addTarget:self action:@selector(updateCelsius) forControlEvents:UIControlEventEditingChanged];
 }
 
@@ -61,12 +66,16 @@
     
 }
 
+- (void) textFieldDidBeginEditing:(UITextField *)textField {
+    [self resetValues];
+}
+
 - (IBAction) doneEditing {
     [self.view endEditing:YES];
 }
 
 - (void) setDefaults {
-    self.fahrenheit.text = [NSString stringWithFormat:@"%0.1f", kDefaultFahrenheit];
+    self.fahrenheit.text = [NSString stringWithFormat:@"%0.1f", DefaultFahrenheit];
     [self updateCelsius];
 }
 

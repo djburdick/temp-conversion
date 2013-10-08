@@ -7,12 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#define kDefaultFahrenheit 80.0
 
-@interface TempViewController : UIViewController
-
-@property (nonatomic, strong) IBOutlet UITextField *celsius;
-@property (nonatomic, strong) IBOutlet UITextField *fahrenheit;
+@interface TempViewController : UIViewController <UITextFieldDelegate>
 
 - (IBAction) doneEditing;
 
